@@ -41,6 +41,16 @@ angular.module('app', [])
                     .error(function(data, status) {
                         $scope.data.httpResponse = $scope.faildResponse;
                     });
+            },
+            postLogin: function($scope) {
+                $http.post('/register',$scope.data)
+                    .success(function(data, status) {
+                        console.log(data);
+                        $scope.data.users = data.data;
+                    })
+                    .error(function(data, status) {
+                        $scope.data.httpResponse = $scope.faildResponse;
+                    });
             }
         }
     })
