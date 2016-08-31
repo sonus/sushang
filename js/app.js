@@ -43,7 +43,7 @@ angular.module('app', [])
                     });
             },
             postLogin: function($scope) {
-                $http.post('/register',$scope.data)
+                $http.post('/login',$scope.data)
                     .success(function(data, status) {
                         console.log(data);
                         $scope.data.users = data.data;
