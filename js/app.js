@@ -22,8 +22,7 @@ angular.module('app', [])
 
             },
             setApiKey: function(config) {
-                config.url = config.url + "?appkey=" + appkey;
-                config.headers['Api_key'] = '123';
+                config.headers['Api_key'] = appkey;
                 // config.headers['Authorization'] = 'Basic d2VudHdvcnRobWFuOkNoYW5nZV9tZQ==';
                 // config.headers['Accept'] = 'application/json;odata=verbose';
                 // config.data['apikey'] = '123';
